@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        :root{
+    --width:200px;
+    --height:100px
+}
+div{
+   width:var(--width);
+   height:var(--height);
+   background-color: red;
+   border-radius:20px ;
+   animation:animi 10s infinite linear;
+   animation-direction: alternate;
+
+}
+@keyframes animi {
+    0% {
+        margin-top: 0;
+        margin-left: 0;
+
+
+    }
+    25% {
+        margin-top: 0;
+        margin-left: calc(100vw - var(--width));
+        background-color: orangered;
+        transform: rotate(180deg);
+    }
+    50% {
+        margin-top: calc(100vh - var(--height));
+        margin-left: calc(100vw - var(--width));
+        background-color: orange;
+        transform: rotate(0deg);
+    }
+    75% {
+        margin-top: calc(100vh - var(--height));
+        margin-left: 0;
+        background-color: coral;
+        transform: rotate(-180deg);
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+</body>
+</html>
